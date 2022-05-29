@@ -1,3 +1,3 @@
 function byField(fieldName){
-  return (a, b) => a[fieldName] > b[fieldName] ? 1 : -1;
+  return (a, b) => fieldName === 'age' ? a.age > b.age : a[fieldName].localeCompare(b[fieldName], 'uk');
 }
